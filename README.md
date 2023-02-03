@@ -17,3 +17,15 @@ during the workshop to help you with your local setup. Proceed with caution :)
 Most instructions will recommend using Anaconda, Conda, or Miniconda. This [Codecademy tutorial](https://www.codecademy.com/article/setting-up-jupyter-notebook) is pretty good.
 
 Since I don't like to install heavy tooling for simple purposes, I followed steps similar to [this tutorial](https://anshbadaya.medium.com/install-jupyter-notebook-without-anaconda-and-have-an-icon-to-run-it-in-your-desired-directory-3e0130ade7a6) instead.
+
+### Setup caveat
+
+There are some bugs in newer versions of `ipython-sql`, 
+so very specific versions need to be installed ([source](https://github.com/catherinedevlin/ipython-sql/issues/227)):
+```
+!pip3 install --upgrade SQLAlchemy==1.4.46
+!pip3 install --upgrade PyMySQL==1.0.2
+!pip3 install --upgrade ipython-sql==0.4.1
+```
+
+This has been included in the `requirements.txt`.
